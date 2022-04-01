@@ -1,5 +1,5 @@
 import { CharacterAction, CharacterActionType } from "../actions/characterActions";
-import { changeCharacterAge, changeCharacterAttributes, changeCharacterClass, changeCharacterName, changeCharacterRace, Character } from "../lib/character";
+import { changeCharacterAge, changeCharacterClass, changeCharacterName, changeCharacterRace, changeCharacterAttributes, Character } from "../lib/character";
 
 export default function characterReducer(state: Character, action: CharacterAction) {
     switch (action.type) {

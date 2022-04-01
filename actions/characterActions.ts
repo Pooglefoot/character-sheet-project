@@ -1,4 +1,5 @@
-import { CharacterClass, Race, Attributes } from "../lib/character";
+import { CharacterClass, Race } from "../lib/character";
+import { Attributes } from "../lib/attributes";
 
 export enum CharacterActionType {
     SET_NAME,

@@ -1,6 +1,7 @@
 import React from "react";
 import { setCharacterName, setCharacterAge, setCharacterRace, setCharacterClass, setCharacterAttributes } from "../actions/characterActions";
-import { changeCharacterAge, changeCharacterName, changeCharacterClass, changeCharacterRace, Character, CharacterClass, createCharacter, Race, Attributes } from "../lib/character";
+import { changeCharacterAge, changeCharacterName, changeCharacterClass, changeCharacterRace, Character, CharacterClass, createCharacter, Race } from "../lib/character";
+import { Attributes } from "../lib/attributes";
 import characterReducer from "../reducers/characterReducer";
 
 interface CharacterContextProps {

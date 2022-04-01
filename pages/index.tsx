@@ -2,7 +2,8 @@ import React from "react";
 import ClassSelect from "../components/ClassSelect";
 import RaceSelect from "../components/RaceSelect";
 import { useCharacter } from "../hooks/CharacterContext";
-import { characterClassToString, characterRaceToString, characterAttributesToArray, AttributeType, setAttribute } from "../lib/character";
+import { characterClassToString, characterRaceToString } from "../lib/character";
+import { characterAttributesToArray, AttributeType, setAttribute } from "../lib/attributes";
 
 export default function IndexPage() {
     const {character, setName, setClass, setRace, setAttributes} = useCharacter();

@@ -1,21 +1,13 @@
+import { Attributes } from "./attributes";
+
 export interface Character {
     name: string;
     age: number;
     race: Race;
     characterClass: CharacterClass;
+    level: number;
     attributes: Attributes;
 }
-
-export enum AttributeType {
-    STRENGTH = "strength",
-    DEXTERITY = "dexterity",
-    CONSTITUTION = "constitution",
-    INTELLIGENCE = "intelligence",
-    WISDOM = "wisdom",
-    CHARISMA = "charisma"
-}
-
-export type Attributes = Readonly<Record<AttributeType, number>>
 
 export enum Race {
     HUMAN = "HUMAN",
@@ -43,6 +35,7 @@ export function createCharacter(name: string = "Conan", age: number = 15): Chara
         age: age,
         race: Race.HUMAN,
         characterClass: CharacterClass.BARBARIAN,
+        level: 1,
         attributes: {
             strength: 10,
             dexterity: 10,
@@ -154,28 +147,10 @@ export function characterClassesAsOptions() {
     );
 }
 
-export function setAttribute(attributes: Attributes, attribute: AttributeType, value: number): Attributes {
-    return {
-            ...attributes,
-            [attribute]: value,
-    }
-}
-
 export function changeCharacterAttributes(character: Character, attributes: Attributes): Character {
 
     return {
         ...character,
         attributes: attributes
     }
-}
-
-export function characterAttributesToArray() {
-    return [
-        AttributeType.STRENGTH,
-        AttributeType.DEXTERITY,
-        AttributeType.CONSTITUTION,
-        AttributeType.INTELLIGENCE,
-        AttributeType.WISDOM,
-        AttributeType.CHARISMA,
-    ]
 }
